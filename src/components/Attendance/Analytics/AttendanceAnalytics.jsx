@@ -29,7 +29,7 @@ const AttendanceAnalytics = () => {
     useEffect(() => {
         fetchAnalyticsData();
         // Set up real-time updates
-        const ws = new WebSocket('ws://localhost:3000/ws/attendance');
+        const ws = new WebSocket('ws://https://nfc-backend-8z7z.onrender.com/ws/attendance');
         ws.onmessage = (event) => {
             const data = JSON.parse(event.data);
             updateRealTimeStats(data);

@@ -8,7 +8,7 @@ class WebSocketClient {
     }
 
     connect() {
-        const wsUrl = import.meta.env.VITE_WS_URL || 'ws://localhost:3000';
+        const wsUrl = import.meta.env.VITE_WS_URL || 'ws://https://nfc-backend-8z7z.onrender.com/';
         this.ws = new WebSocket(wsUrl);
 
         this.ws.onopen = () => {

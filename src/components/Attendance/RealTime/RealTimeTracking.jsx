@@ -13,7 +13,7 @@ const RealTimeTracking = () => {
 
     useEffect(() => {
         // Connect to WebSocket for real-time updates
-        const ws = new WebSocket('ws://localhost:3000/ws/attendance-tracking');
+        const ws = new WebSocket('ws://https://nfc-backend-8z7z.onrender.com/ws/attendance-tracking');
         
         ws.onmessage = (event) => {
             const data = JSON.parse(event.data);
